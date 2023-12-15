@@ -1,4 +1,4 @@
-function [T1map] = EstimateT1WithJson(filename, jsonfileinv1,jsonfileinv2, TRFLASH, NzSlices,eff)    
+function [T1map] = EstimateT1fromMP2RAGE(filename, jsonfileinv1,jsonfileinv2, TRFLASH, NzSlices,eff,outputfilename)    
 % Example Usage:
 % EstimateT1WithJson('/fileserver/fastscratch/prabh/datasets/thresherepilepsy/flywheel20230224/ForEpilepsyMynames/SUBJECTS/4066815/SESSIONS/3T/ACQUISITIONS/t1w/t1w_MP2RAGE_UNI/t1w_MP2RAGE_UNI.nii.gz','/fileserver/fastscratch/prabh/datasets/thresherepilepsy/flywheel20230224/ForEpilepsyMynames/SUBJECTS/4066815/SESSIONS/3T/ACQUISITIONS/t1w/t1w_MP2RAGE_INV1/t1w_MP2RAGE_INV1.json','/fileserver/fastscratch/prabh/datasets/thresherepilepsy/flywheel20230224/ForEpilepsyMynames/SUBJECTS/4066815/SESSIONS/3T/ACQUISITIONS/t1w/t1w_MP2RAGE_INV2/t1w_MP2RAGE_INV2.json',...
 % 0.0064,[30 120],1.0)
@@ -26,4 +26,6 @@ function [T1map] = EstimateT1WithJson(filename, jsonfileinv1,jsonfileinv2, TRFLA
     MP2RAGEimg=load_untouch_nii(MP2RAGE.filename);
     
     [T1map, R1map]=T1estimateMP2RAGE(MP2RAGEimg,MP2RAGE,eff);
+
+    save_untouch_nii(T1map,outputfilename);
 end

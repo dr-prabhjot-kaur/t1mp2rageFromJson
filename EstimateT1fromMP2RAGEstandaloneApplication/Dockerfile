@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 ARG  DEBIAN_FRONTEND=noninteractive
 ENV  TZ="America/New_York"
 
-RUN echo 'Acquire::http::Proxy "http://proxy.tch.harvard.edu:3128"; Acquire::https::Proxy "https://proxy.tch.harvard.edu:3128";' > /etc/apt/proxy.conf
+#RUN echo 'Acquire::http::Proxy "http://proxy.tch.harvard.edu:3128"; Acquire::https::Proxy "https://proxy.tch.harvard.edu:3128";' > /etc/apt/proxy.conf
 #RUN cat /etc/apt/proxy.conf
 
 RUN apt-get update 

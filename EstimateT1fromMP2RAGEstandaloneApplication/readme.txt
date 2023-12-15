@@ -39,8 +39,7 @@ Files to Package for Standalone
     /mathworks/home/application/R2023a, run the shell script as:
     
        ./run_EstimateT1fromMP2RAGE.sh /mathworks/home/application/R2023a
-       %./run_EstimateT1WithJson.sh /mathworks/home/application/R2023a /fileserver/fastscratch/prabh/datasets/thresherepilepsy/flywheel20230224/ForEpilepsyMynames/SUBJECTS/4066815/SESSIONS/3T/ACQUISITIONS/t1w/t1w_MP2RAGE_UNI/t1w_MP2RAGE_UNI.nii.gz,/fileserver/fastscratch/prabh/datasets/thresherepilepsy/flywheel20230224/ForEpilepsyMynames/SUBJECTS/4066815/SESSIONS/3T/ACQUISITIONS/t1w/t1w_MP2RAGE_INV1/t1w_MP2RAGE_INV1.json,/fileserver/fastscratch/prabh/datasets/thresherepilepsy/flywheel20230224/ForEpilepsyMynames/SUBJECTS/4066815/SESSIONS/3T/ACQUISITIONS/t1w/t1w_MP2RAGE_INV2/t1w_MP2RAGE_INV2.json,0.0064,[30 120],1.0
-
+       
     If you have MATLAB installed in /mathworks/devel/application/matlab, 
     run the shell script as:
     
