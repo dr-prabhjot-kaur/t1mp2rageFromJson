@@ -1,4 +1,4 @@
-EstimateT1fromMP2RAGE Executable
+EstimateT1fromMP2RAGE1 Executable
 
 1. Prerequisites for Deployment 
 
@@ -23,12 +23,12 @@ in the MathWorks Documentation Center.
 
 Files to Package for Standalone 
 ================================
--EstimateT1fromMP2RAGE 
--run_EstimateT1fromMP2RAGE.sh (shell script for temporarily setting environment variables 
-                               and executing the application)
+-EstimateT1fromMP2RAGE1 
+-run_EstimateT1fromMP2RAGE1.sh (shell script for temporarily setting environment 
+                                variables and executing the application)
    -to run the shell script, type
    
-       ./run_EstimateT1fromMP2RAGE.sh <mcr_directory> <argument_list>
+       ./run_EstimateT1fromMP2RAGE1.sh <mcr_directory> <argument_list>
        
     at Linux or Mac command prompt. <mcr_directory> is the directory 
     where MATLAB Runtime(R2023a) is installed or the directory where 
@@ -38,12 +38,12 @@ Files to Package for Standalone
     If you have MATLAB Runtime(R2023a) installed in 
     /mathworks/home/application/R2023a, run the shell script as:
     
-       ./run_EstimateT1fromMP2RAGE.sh /mathworks/home/application/R2023a
+       ./run_EstimateT1fromMP2RAGE1.sh /mathworks/home/application/R2023a
        
     If you have MATLAB installed in /mathworks/devel/application/matlab, 
     run the shell script as:
     
-       ./run_EstimateT1fromMP2RAGE.sh /mathworks/devel/application/matlab
+       ./run_EstimateT1fromMP2RAGE1.sh /mathworks/devel/application/matlab
 -MCRInstaller.zip
     Note: if end users are unable to download the MATLAB Runtime using the
     instructions in the previous section, include it when building your 
@@ -92,7 +92,7 @@ ${LD_LIBRARY_PATH}:MR/R2023a/runtime/glnxa64:MR/R2023a/bin/glnxa64:MR/R2023a/sys
         NOTE: The environment variable syntax utilizes forward 
               slashes (/), delimited by colons (:).  
         NOTE: When deploying standalone applications, you can
-              run the shell script file run_EstimateT1fromMP2RAGE.sh 
+              run the shell script file run_EstimateT1fromMP2RAGE1.sh 
               instead of setting environment variables. See 
               section 2 "Files to Deploy and Package".    
 

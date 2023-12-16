@@ -30,7 +30,7 @@ else
       args="${args} \"${token}\"" 
       shift
   done
-  eval "\"${exe_dir}/EstimateT1fromMP2RAGE\"" $args
+  eval "\"${exe_dir}/EstimateT1fromMP2RAGE1\"" $args
 fi
 exit
 
