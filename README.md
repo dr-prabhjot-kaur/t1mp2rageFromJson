@@ -9,7 +9,11 @@ docker pull prabhjotkaur1991/t1mp2rage:latest
 OR
 
 Build it from github repo
+
+
 git clone https://github.com/dr-prabhjot-kaur/t1mp2rageFromJson.git
+
+
 docker build username/t1mp2rage:latest
 
 2. Run the docker file to estimate t1 map from mp2rage images.
