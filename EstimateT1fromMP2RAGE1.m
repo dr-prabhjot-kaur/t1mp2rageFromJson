@@ -10,9 +10,9 @@ function [T1map] = EstimateT1fromMP2RAGE1(filename, jsonfileinv1,jsonfileinv2, T
     MP2RAGE.B0=jsonData.MagneticFieldStrength;
     MP2RAGE.TR=jsonData.RepetitionTime;
 
-    MP2RAGE.TRFLASH=TRFLASH;%0.0064; % TR of the GRE readout
+    MP2RAGE.TRFLASH=str2num(TRFLASH);%0.0064; % TR of the GRE readout
     MP2RAGE.TIs=[jsonData.InversionTime jsonData2.InversionTime];% inversion times - time between middle of refocusing pulse and excitatoin of the k-space center encoding
-    MP2RAGE.NZslices= [NzSlices1, NzSlices2]; %[ 30 120];% Slices Per Slab * [PartialFourierInSlice-0.5  0.5]
+    MP2RAGE.NZslices= [str2num(NzSlices1), str2num(NzSlices2)]; %[ 30 120];% Slices Per Slab * [PartialFourierInSlice-0.5  0.5]
     MP2RAGE.FlipDegrees=[jsonData.FlipAngle jsonData2.FlipAngle];% Flip
     MP2RAGE.filename=filename;%'MP2RAGE_UNI.nii' % file
 
@@ -26,7 +26,7 @@ function [T1map] = EstimateT1fromMP2RAGE1(filename, jsonfileinv1,jsonfileinv2, T
     MP2RAGEimg=load_untouch_nii(MP2RAGE.filename);
     disp(MP2RAGE)
     disp(size(MP2RAGEimg.img))
-    [T1map, R1map]=T1estimateMP2RAGE(MP2RAGEimg,MP2RAGE,eff);
+    [T1map, R1map]=T1estimateMP2RAGE(MP2RAGEimg,MP2RAGE,str2num(eff));
     T1map.img=1000.*T1map.img;
     save_untouch_nii(T1map,outputfilename);
 end
