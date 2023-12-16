@@ -24,9 +24,10 @@ function [T1map] = EstimateT1fromMP2RAGE1(filename, jsonfileinv1,jsonfileinv2, T
     % load the MP2RAGE data - it can be either the SIEMENS one scaled from
     % 0 4095 or the standard -0.5 to 0.5
     MP2RAGEimg=load_untouch_nii(MP2RAGE.filename);
-    disp(MP2RAGE)
-    disp(size(MP2RAGEimg.img))
+    % disp(MP2RAGE)
+    % disp(size(MP2RAGEimg.img))
     [T1map, R1map]=T1estimateMP2RAGE(MP2RAGEimg,MP2RAGE,str2num(eff));
     T1map.img=1000.*T1map.img;
     save_untouch_nii(T1map,outputfilename);
+    disp('Finished...')
 end
