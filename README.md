@@ -2,6 +2,8 @@
 
 1. 
 Either pull from dockerhub
+
+
 docker pull prabhjotkaur1991/t1mp2rage:latest 
 
 OR
